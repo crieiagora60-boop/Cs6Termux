@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLOUD PC X</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><div class="brand"><span class="logo">▣</span><div><b>CLOUD PC X</b><small>virtual computer manager</small></div></div><span class="pill">● VULTR CLOUD</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">PAINEL DE CONTROLE</p><h1>seus computadores,<br><em>na nuvem</em></h1><p class="sub">crie e gerencie máquinas virtuais com endereços IP públicos</p></div><button class="primary" id="newBtn">＋ criar PC</button></section>
+<section class="stats"><article><span>máquinas cadastradas</span><strong id="count">0</strong></article><article><span>máquinas ligadas</span><strong id="running">0</strong></article><article><span>IPs públicos</span><strong id="ips">0</strong></article></section>
+<section class="panel"><div class="panel-head"><div><h2>suas máquinas</h2><p>instâncias reais da Vultr</p></div><button class="ghost" id="refresh">↻ atualizar</button></div><div id="notice" class="notice">verificando conexão com o servidor…</div><div id="machines" class="machines"><div class="empty">carregando máquinas…</div></div></section>
+<footer>cloud pc x <span>as máquinas geram custos no provedor enquanto estiverem provisionadas</span></footer>
+</main>
+<dialog id="createDialog"><form id="createForm"><div class="dialog-head"><div><p class="eyebrow">NOVA INSTÂNCIA</p><h2>criar computador</h2></div><button type="button" class="close" id="close">×</button></div>
+<label>nome do PC<input name="label" required minlength="3" maxlength="32" pattern="[A-Za-z0-9-]+" placeholder="meu-pc-01"></label>
+<label>sistema operacional<select name="osId" id="os" required><option value="">carregando sistemas…</option></select></label>
+<label>região<select name="region" id="region" required><option value="">carregando regiões…</option></select></label>
+<label>plano<select name="plan" id="plan" required><option value="">escolha uma região primeiro</option></select></label>
+<p class="warning">⚠️ criar uma máquina inicia uma cobrança real. faça isso somente com autorização do responsável pela conta.</p>
+<button class="primary full" type="submit">criar máquina virtual</button><p id="formError" class="error"></p></form></dialog>
+<script src="/app.js"></script>
+</body></html>
